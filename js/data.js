@@ -1,1 +1,1 @@
-
+const scriptsData=[{id:1,title:"Math Murder",desc:"Pastebin",link:"https://kyaarb.github.io/Home",youtube:"0F3Dw3_WiQc",status:"UPDATED"},{id:2,title:"Blox Fruits",desc:"Blue X Hub",link:"https://linkunlocker.com/blox-fruits-script-bluex-hub-MSIvV",youtube:"mzRA5zmEHVM",status:"UPDATED"},]
