@@ -14,96 +14,229 @@
             padding: 20px;
             background-color: #f4f7f6;
         }
+
         .container {
             background: #fff;
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #34495e; margin-top: 30px; font-size: 1.3em; }
-        h3 { color: #555; margin-top: 20px; }
-        .last-updated { color: #7f8c8d; font-style: italic; margin-bottom: 30px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            font-size: 1.3em;
+        }
+
+        .last-updated {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: .9em;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        code {
+            background: #f3f3f3;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Privacy Policy for Furina</h1>
-    <p class="last-updated">Last Updated: July 17, 2026</p>
 
-    <p>This Privacy Policy explains how the <strong>Furina</strong> Discord bot collects, processes, stores, and protects user data.</p>
+    <h1>Privacy Policy for Furina</h1>
+
+    <p class="last-updated">
+        Last Updated: July 23, 2026
+    </p>
+
+    <p>
+        This Privacy Policy explains how the <strong>Furina</strong> Discord bot
+        ("the Bot") collects, processes, stores, uses, and protects information
+        when you interact with the Bot.
+    </p>
 
     <h2>1. Information Collected</h2>
-    <p>The bot may process the following information:</p>
-    <ul>
-        <li>Discord User ID</li>
-        <li>Messages sent to the bot</li>
-        <li>Recent conversation history required to maintain short-term context</li>
-        <li>Technical information necessary for operation (such as rate-limiting data)</li>
-    </ul>
-    <p>The bot does not intentionally collect sensitive personal information.</p>
 
-    <h2>2. How Data Is Used</h2>
+    <p>The Bot may process the following information:</p>
+
+    <ul>
+        <li>Discord User ID (used only to generate an irreversible internal identifier).</li>
+        <li>Messages sent to the Bot.</li>
+        <li>Recent conversation history required to maintain short-term conversational context.</li>
+        <li>Technical information necessary for operation, including temporary rate-limiting data.</li>
+    </ul>
+
+    <p>
+        The Bot does <strong>not</strong> intentionally collect sensitive personal
+        information.
+    </p>
+
+    <h2>2. How Information Is Used</h2>
+
     <p>Collected information is used solely to:</p>
+
     <ul>
         <li>Generate AI responses.</li>
         <li>Maintain short-term conversation context.</li>
         <li>Prevent spam, abuse, and excessive requests.</li>
-        <li>Operate, maintain, and improve the bot's reliability and stability.</li>
+        <li>Operate, maintain, and improve the Bot.</li>
+        <li>Diagnose and resolve technical issues.</li>
     </ul>
 
     <h2>3. Data Storage</h2>
-    <p>To maintain conversation context, the bot stores a limited amount of recent conversation history.</p>
+
+    <p>
+        To provide contextual AI conversations, the Bot stores a limited amount of
+        recent conversation history.
+    </p>
+
     <p>The current implementation:</p>
+
     <ul>
-        <li>Stores up to 10 conversation entries per user (including both user and assistant messages).</li>
-        <li>Automatically removes older conversation entries when this limit is exceeded.</li>
-        <li>Stores conversation history locally in an <strong>AES-256-GCM</strong> encrypted database.</li>
-        <li>Does not store Discord User IDs directly. Instead, user identifiers are stored as <strong>SHA-256 hashes</strong> derived from the Discord User ID and a server-side secret key.</li>
+        <li>Stores only a limited amount of recent conversation history.</li>
+        <li>Automatically trims stored conversation history when it exceeds the configured context limit.</li>
+        <li>Stores conversation history locally using <strong>AES-256-GCM</strong> encryption.</li>
+        <li>Never stores Discord User IDs directly.</li>
+        <li>Instead, the Bot stores an irreversible <strong>SHA-256 hash</strong> derived from the Discord User ID together with a server-side secret.</li>
+        <li>Stored data is accessible only by the Bot's runtime environment.</li>
     </ul>
-    <p><em>These implementation details may change in future versions of the bot.</em></p>
+
+    <p>
+        <em>
+            These implementation details may change in future versions of the Bot.
+        </em>
+    </p>
 
     <h2>4. Third-Party Services</h2>
-    <p>User messages may be transmitted to third-party AI providers, such as Groq, solely for generating AI responses.</p>
-    <p>These providers process requests according to their own privacy policies. The bot developer does not control how third-party services handle data once it has been transmitted to them.</p>
+
+    <p>
+        User messages are transmitted to <strong>Groq</strong> solely for the
+        purpose of generating AI responses.
+    </p>
+
+    <p>
+        Once transmitted, information is processed according to Groq's own privacy
+        practices. The Bot developer does not control how third-party services
+        process information after transmission.
+    </p>
+
+    <p>
+        Only the information necessary to generate a response is transmitted.
+    </p>
 
     <h2>5. Data Sharing</h2>
-    <p>The developer does not sell, rent, or intentionally disclose user data to third parties. Data may only be shared when:</p>
+
+    <p>
+        The developer does <strong>not</strong> sell, rent, or intentionally
+        disclose user information to third parties.
+    </p>
+
+    <p>Information may only be shared when:</p>
+
     <ul>
         <li>Required for AI response generation through authorized AI providers.</li>
         <li>Required to comply with applicable laws or legal obligations.</li>
     </ul>
 
     <h2>6. Data Security</h2>
-    <p>Reasonable security measures are used to protect stored data, including:</p>
+
+    <p>
+        Reasonable technical and organizational measures are used to protect stored
+        information, including:
+    </p>
+
     <ul>
         <li>AES-256-GCM encryption for locally stored conversation history.</li>
-        <li>Hashed user identifiers.</li>
-        <li>Access restricted to the bot's runtime environment.</li>
+        <li>SHA-256 hashing of Discord User IDs before storage.</li>
+        <li>Restricted access to stored data.</li>
+        <li>Limited retention of conversation history.</li>
     </ul>
-    <p>While reasonable efforts are made to secure data, no storage or transmission method can be guaranteed to be completely secure.</p>
+
+    <p>
+        While reasonable efforts are made to protect information, no storage or
+        transmission method can be guaranteed to be completely secure.
+    </p>
 
     <h2>7. Data Retention</h2>
-    <p>Conversation history is retained only as long as necessary for the bot's functionality. Data may be removed:</p>
+
+    <p>
+        Conversation history is retained only as long as necessary for the Bot's
+        functionality.
+    </p>
+
+    <p>Stored information may be removed:</p>
+
     <ul>
-        <li>Automatically when the conversation history exceeds the configured storage limit.</li>
+        <li>Automatically when the configured conversation limit is exceeded.</li>
         <li>Manually by the developer.</li>
-        <li>If the local database is reset or deleted.</li>
+        <li>If the local database is reset, deleted, or replaced.</li>
     </ul>
 
-    <h2>8. Changes to This Policy</h2>
-    <p>This Privacy Policy may be updated at any time. Continued use of the bot after changes become effective constitutes acceptance of the revised Privacy Policy.</p>
+    <h2>8. Rate Limiting</h2>
 
-    <h2>9. Contact</h2>
-    <p>Questions regarding this Privacy Policy or the Terms of Service should be directed through the bot's official support server.</p>
+    <p>
+        Temporary rate-limiting information may be processed to protect the Bot
+        from spam, abuse, and excessive requests.
+    </p>
+
+    <p>
+        This information is used solely for abuse prevention and is not used for
+        advertising or user profiling.
+    </p>
+
+    <h2>9. Changes to This Privacy Policy</h2>
+
+    <p>
+        This Privacy Policy may be updated at any time.
+    </p>
+
+    <p>
+        The "Last Updated" date will be revised whenever significant changes are
+        made.
+    </p>
+
+    <p>
+        Continued use of the Bot after changes become effective constitutes
+        acceptance of the revised Privacy Policy.
+    </p>
+
+    <h2>10. Contact</h2>
+
+    <p>
+        Questions regarding this Privacy Policy or the Terms of Service should be
+        directed through the Bot's official support server or other official
+        communication channels provided by the developer.
+    </p>
 
     <footer>
         &copy; 2026 Furina Bot. All rights reserved.
     </footer>
+
 </div>
 
 </body>
