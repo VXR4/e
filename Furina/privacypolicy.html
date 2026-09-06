@@ -87,13 +87,13 @@
 <body><div class="container"><h1>Privacy Policy for Furina</h1>
 
 <p class="last-updated">
-    Last Updated: July 30, 2026
+    Last Updated: September 6, 2026
 </p>
 
 <p>
     This Privacy Policy explains how the <strong>Furina</strong> Discord bot
-    ("the Bot") collects, processes, stores, uses, and protects information
-    when you interact with the Bot.
+    ("the Bot") — including its companion web chat — collects, processes,
+    stores, uses, and protects information when you interact with it.
 </p>
 
 <h2>1. Information Collected</h2>
@@ -107,6 +107,7 @@
     <li>Preferred display language.</li>
     <li>Technical information necessary for operation, including temporary rate-limiting data and a daily request counter.</li>
     <li>If an admin blocks or exempts a specific user from rate limits, that user's Discord ID, username, and (for a block) an optional reason are stored in an access-control list.</li>
+    <li>If you sign into the web chat with Discord, a session cookie identifying your Discord account (ID, display name, and avatar) so the site can show you're logged in.</li>
 </ul>
 
 <p>
@@ -147,7 +148,18 @@
     </em>
 </p>
 
-<h2>4. Third-Party Services</h2>
+<h2>4. Web Chat</h2>
+
+<p>
+    Furina is also reachable through a web chat, separate from Discord. It works in two modes:
+</p>
+
+<ul>
+    <li><strong>Anonymous:</strong> no account needed, and nothing is stored on the server. Your conversation exists only in that browser tab and is gone when you close or refresh the page. Your IP address is used momentarily to apply a fair-use rate limit, and is not saved alongside your messages.</li>
+    <li><strong>Signed in with Discord:</strong> logging in links your browser session to the same hashed identifier described in Section 3, so your web chat and Discord conversations are the same stored conversation — not a separate copy. A session cookie keeps you logged in for up to 30 days, or until you log out.</li>
+</ul>
+
+<h2>5. Third-Party Services</h2>
 
 <p>
     User messages are transmitted to <strong>Groq</strong> solely for the purpose of generating AI responses.
@@ -161,7 +173,7 @@
     Only the information necessary to generate a response is transmitted.
 </p>
 
-<h2>5. Data Sharing</h2>
+<h2>6. Data Sharing</h2>
 
 <p>
     The developer does <strong>not</strong> sell, rent, or intentionally disclose user information to third parties.
@@ -174,7 +186,7 @@
     <li>Required to comply with applicable laws or legal obligations.</li>
 </ul>
 
-<h2>6. Data Security</h2>
+<h2>7. Data Security</h2>
 
 <p>
     Reasonable technical and organizational measures are used to protect stored information, including:
@@ -185,13 +197,14 @@
     <li>Irreversible SHA-256 hashing of Discord User IDs prior to storage.</li>
     <li>Restricted access to database credentials and stored data.</li>
     <li>Limited retention and automatic trimming of conversation history.</li>
+    <li>Signed, HTTP-only session cookies for the web chat's Discord login.</li>
 </ul>
 
 <p>
     While reasonable efforts are made to protect information, no storage or transmission method can be guaranteed to be completely secure.
 </p>
 
-<h2>7. Data Retention</h2>
+<h2>8. Data Retention</h2>
 
 <p>
     Conversation history is retained only as long as necessary for the Bot's functionality.
@@ -200,27 +213,28 @@
 <p>Stored information may be removed:</p>
 
 <ul>
-    <li>By the user at any time, via a command to delete a specific past exchange or to erase their entire conversation history.</li>
+    <li>By the user at any time, via a command to delete a specific past exchange or to erase their entire conversation history — on Discord or in the web chat.</li>
     <li>Automatically when the configured character context limit is exceeded.</li>
     <li>Manually by the developer upon request or during maintenance.</li>
     <li>If the database is reset, cleared, or migrated.</li>
+    <li>For anonymous web chat, automatically whenever the browser tab is closed or refreshed, since nothing is stored server-side to begin with.</li>
 </ul>
 
-<h2>8. Rate Limiting</h2>
+<h2>9. Rate Limiting</h2>
 
 <p>
     Most rate-limiting information (short-term request counters) is processed only in memory and is not persisted.
 </p>
 
 <p>
-    A daily request counter, linked to the same irreversible hashed identifier used for conversation history, is stored in the database so the daily limit is enforced consistently even if the Bot restarts.
+    A daily request counter, linked to the same irreversible hashed identifier used for conversation history, is stored in the database so the daily limit is enforced consistently even if the Bot restarts. This limit, along with the bot-wide request limit, is shared across Discord and the web chat.
 </p>
 
 <p>
     This information is used solely for abuse prevention and is not used for advertising or user profiling.
 </p>
 
-<h2>9. Changes to This Privacy Policy</h2>
+<h2>10. Changes to This Privacy Policy</h2>
 
 <p>
     This Privacy Policy may be updated at any time.
@@ -234,7 +248,7 @@
     Continued use of the Bot after changes become effective constitutes acceptance of the revised Privacy Policy.
 </p>
 
-<h2>10. Contact</h2>
+<h2>11. Contact</h2>
 
 <p>
     Questions regarding this Privacy Policy or the Terms of Service should be directed through the Bot's official support server or other official communication channels provided by the developer.
